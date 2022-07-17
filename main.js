@@ -8,6 +8,10 @@ var reset=document.getElementById('reset');
 var private=document.getElementById('private');
 var array=[];
 var arrayShow=[];
+// te.value ='-';
+// tich.value='.';
+// '●'='.';
+// '━'='-';
 
 function TichFunction() {
    array.push(tich.value);
@@ -31,6 +35,7 @@ te.addEventListener('click',TeFunction);
 
 function ArrayFunction () {
     var result = meta.value;    
+    
         if (result=='.' ) { arrayShow.push('E')} else 
         if (result=='..' ) { arrayShow.push('I')} else 
         if (result=='...' ) { arrayShow.push('S')} else 
