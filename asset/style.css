@@ -1,0 +1,146 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    /* background-image:url(./img/background_Từ\ Ân.jpg);
+    background-repeat: no-repeat; */
+}
+
+.heading{
+    text-align: center;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    flex-direction: column;
+}
+.heading h1 {
+    text-transform: uppercase;
+}
+/* .content {
+    height: 100vh;
+} */
+.container{
+    display: flex;
+    width: 100%;
+    /* height: calc(100vh - 42px);    nhớ phải cách dấu trừ ra */
+    height: 80vh;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+
+}
+.morse {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+.morse-btn{ 
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.morse-btn input {
+    width: 33.333%;
+    height: 50px;
+    font-size: 24px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 6px;
+    background-color: #fff;
+}
+.morse-btn input:nth-child(3) {
+    font-weight: bold;
+}
+.container .morse .input-morse{
+    display: flex;
+    flex-direction: column;
+    width: 33.3333%;
+    margin: 0 8px;
+}
+.input-morse label {
+    font-size: 20px;
+    margin-bottom: 2px;
+}
+.morse .input-morse input{
+    height: 50px;
+    font-size: 21px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 6px;
+    width: 100%;
+    border: 1px solid;
+}
+#nhaplieu {
+    font-size: 30px;
+}
+::placeholder{
+    font-size: 21px;
+}
+/* footer */
+.footer {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    background-color: black;
+    bottom: 0;
+}
+/* mobile */
+@media only screen and (max-width:46.1875em){
+    .heading{
+        font-size: 15px;
+    }
+    .container {
+        margin-top:-20%;
+    }
+    .container .morse {
+        flex-direction: column;
+    }
+    .container .morse .input-morse {
+        width: 95%;
+        margin: 12px;
+        margin-left: 9px;
+    }
+    .morse-btn {
+        flex-wrap: wrap;
+    }
+    .morse-btn input{
+        width: 30%;
+        margin: 7px 5px;
+    }
+    .morse-btn input:last-child {
+        width: 100%;
+
+    }
+    
+}
+/* tablet */
+@media only screen  and (min-width:46.25em) and (max-width:63.9375em) {
+    .container {
+        margin-top:-20%;
+    }
+    .container .morse {
+        flex-direction: column;
+    }
+    .container .morse .input-morse {
+        width: 95%;
+        margin: 12px;
+        margin-left: 9px;
+    }
+    .morse-btn {
+        flex-wrap: wrap;
+    }
+    .morse-btn input{
+        width: 30%;
+        margin: 5px 5px;
+    }
+    .morse-btn input:last-child {
+        width: 100%;
+
+    }
+    
+}
