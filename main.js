@@ -5,13 +5,16 @@ var show = document.getElementById('hienthi');
 var submit = document.getElementById('send');
 var meta = document.getElementById('nhaplieu');
 var reset=document.getElementById('reset');
+var deleteX=document.getElementById('delete')
+
 var private=document.getElementById('private');
 var array=[];
 var arrayShow=[];
-// te.value ='-';
-// tich.value='.';
-// '●'='.';
-// '━'='-';
+var MyTimeour = setTimeout(MyInfor,3000)
+function MyInfor() {
+    private.value="Nhật Huy đến từ GĐPT Từ ÂN";
+}
+
 
 function TichFunction() {
    array.push(tich.value);
@@ -118,3 +121,21 @@ function ResetFunction() {
 }
 reset.addEventListener('click',ResetFunction)
 
+function DeleteFunction() {
+    // dùng string là meta.value
+    //  var length=meta.value.length;
+    //  var stringdelete=meta.value;
+    // if (length>0) {
+    //     stringphu=stringdelete.slice(0,-1);
+    //     stringdelete=stringphu;
+    //     console.log(stringphu);
+    //  }
+
+    if (meta.value.length>0) {
+        str1=meta.value.slice(0,-1);
+        meta.value=str1;
+        // console.log(str1);
+    }
+    meta.value=str1;
+}
+deleteX.addEventListener('click',DeleteFunction)
