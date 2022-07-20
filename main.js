@@ -7,14 +7,18 @@ var meta = document.getElementById('nhaplieu');
 var reset=document.getElementById('reset');
 var deleteX=document.getElementById('delete')
 
+var resetmeta=document.getElementById('resetmeta');
+var resetshow=document.getElementById('resetshow');
+var resetprivate=document.getElementById('resetprivate');
+
 var private=document.getElementById('private');
 var array=[];
 var arrayShow=[];
 var MyTimeour = setTimeout(MyInfor,3000)
+
 function MyInfor() {
     private.value="Nhật Huy đến từ GĐPT Từ ÂN";
 }
-
 
 function TichFunction() {
    array.push(tich.value);
@@ -35,6 +39,35 @@ function TeFunction() {
     meta.value=string;     
 }
 te.addEventListener('click',TeFunction);
+
+function ResetMeta() {
+    meta.value='';
+    array=[];
+}
+resetmeta.addEventListener('click',ResetMeta);
+
+function ResetShow() {
+    show.value='';
+    arrayShow=[];
+}
+resetshow.addEventListener('click',ResetShow)
+
+function ResetPrivate() {
+    private.value='';
+}
+resetprivate.addEventListener('click',ResetPrivate)
+function DeleteFunction() {
+    var str1='';
+    if (meta.value.length>0) {
+        str1=meta.value.slice(0,-1);
+        meta.value=str1;
+    }
+    meta.value=str1;
+    // thay đổi mảng sau khi xóa thành str1 và sau đó nhấn thì add kí tự vào thêm
+    array=[str1];
+}
+deleteX.addEventListener('click',DeleteFunction)
+
 
 function ArrayFunction () {
     var result = meta.value;    
@@ -121,21 +154,4 @@ function ResetFunction() {
 }
 reset.addEventListener('click',ResetFunction)
 
-function DeleteFunction() {
-    // dùng string là meta.value
-    //  var length=meta.value.length;
-    //  var stringdelete=meta.value;
-    // if (length>0) {
-    //     stringphu=stringdelete.slice(0,-1);
-    //     stringdelete=stringphu;
-    //     console.log(stringphu);
-    //  }
 
-    if (meta.value.length>0) {
-        str1=meta.value.slice(0,-1);
-        meta.value=str1;
-        // console.log(str1);
-    }
-    meta.value=str1;
-}
-deleteX.addEventListener('click',DeleteFunction)
