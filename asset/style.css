@@ -3,9 +3,12 @@
     margin: 0;
     box-sizing: border-box;
 }
+html {
+    font: optional;
+}
 body {
-    /* background-image: url(./img/logo_Từ\ Ân.png);
-    background-repeat: no-repeat; */
+   background-color: lightsteelblue;
+
 }
 :root {
     --height-heading: 15vh;
@@ -13,14 +16,24 @@ body {
 .heading{
     text-align: center;
     margin-top: 5px;
-    display: flex;
+    color:  #097416;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     height: var(--height-heading);
-    flex-direction: column;
+    /* flex-direction: column;     */
 }
+
 .heading h1 {
     text-transform: uppercase;
+    line-height: var(--height-heading);
+}
+.heading h2 {
+    margin-top: -30px;
+}
+.heading img {
+    width: 36px;
+    text-align: center;
 }
 .content {
     height: calc(99vh - var(--height-heading));
@@ -44,6 +57,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-between;
+  
 }
 .morse-btn button {
     width: 33.333%;
@@ -53,6 +67,14 @@ body {
     align-items: center;
     margin: 0 6px;
     background-color: #fff;
+    cursor: pointer;
+    border: #000 solid 1px;
+    background-color: rgb(60,179,113);
+    color: #fff;
+}
+.morse-btn button:active{
+    background-color:unset;
+    color: #000;
 }
 .morse-btn button:nth-child(3) {
     font-weight: bold;
@@ -67,6 +89,7 @@ body {
 .input-morse label {
     font-size: 20px;
     margin-bottom: 2px;
+    color:#2334ad ;
 }
 .morse .input-morse input{
     height: 50px;
@@ -76,19 +99,35 @@ body {
     padding-left: 6px;
     width: 100%;
     border: 1px solid;
+    color: navy;
+    border-radius:9px ;
+}
+.morse .input-morse input:focus{
+    outline: blue solid 1px ;
+    /* background-color: blue; */
 }
 .input-morse button {
     position: absolute;
     right: 0;
     height: 50px;
     width: 50px;
+    border: #000 solid 1px;
     justify-content: center;
     display: flex;
     align-items: center;
     margin: auto;
     bottom: 0;
+    border-radius:0px 9px 9px 0px ;
+    background-color:#87CEFA;
+    color: rgb(255 255 255);
+
 }
 
+.input-morse button:active {
+    background-color: rgb(60,179,113);
+    color: #fff;
+    border: #097416;
+}
 #nhaplieu {
     font-size: 30px;
 }
@@ -102,6 +141,9 @@ body {
     position: absolute;
     background-color: black;
     bottom: 0;
+}
+.footer .content-footer img {
+    width: 100%;
 }
 /* mobile */
 @media only screen and (max-width:46.1875em){
