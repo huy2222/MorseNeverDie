@@ -14,9 +14,9 @@ var resetprivate=document.getElementById('resetprivate');
 var private=document.getElementById('private');
 var array=[];
 var arrayShow=[];
-var MyTimeour = setTimeout(MyInfor,3000)
+var MyTimeour = setTimeout(MyInfor,3000);
 
-function MyInfor() {
+function MyInfor() {  
     private.value="Nhật Huy đến từ GĐPT Từ ÂN";
 }
 
@@ -153,5 +153,24 @@ function ResetFunction() {
     private.value='';
 }
 reset.addEventListener('click',ResetFunction)
+
+
+var ContentMorse = document.getElementById('Id-content');
+var Password = document.getElementById('password');
+var btnPassword = document.getElementById('submit-password');
+var ContentLayout = document.getElementById('JS-layout');
+
+function GetvaluePassword() {
+    var passwordValue= Password.value;
+    if (passwordValue=='gdpttuan') {
+        ContentMorse.style.display='block';
+        ContentLayout.style.display='none';
+        
+    } else {
+        alert('bạn nhập sai mật khẩu');
+    }
+
+}
+btnPassword.addEventListener('click',GetvaluePassword);
 
 
