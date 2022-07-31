@@ -11,6 +11,24 @@ body {
    margin: 0;
 
 }
+/* similar */
+.btn-resetInput{
+    position: absolute;
+    right: 0;
+    height: 50px;
+    width: 50px;
+    border: #000 solid 1px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    bottom: 0;
+    border-radius:0px 9px 9px 0px ;
+    background-color:#87CEFA;
+    color: rgb(255 255 255);
+}
+
+/* end */
 :root {
     --height-heading: 15vh;
 }
@@ -18,11 +36,7 @@ body {
     text-align: center;
     margin-top: 5px;
     color:  #097416;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     height: var(--height-heading);
-    /* flex-direction: column;     */
 }
 
 .heading h1 {
@@ -37,8 +51,8 @@ body {
     text-align: center;
 }
 .content {
-    height: calc(99vh - var(--height-heading));
-    display: none;
+    height: calc(100vh - var(--height-heading));
+    
 }
 .container{
     display: flex;
@@ -106,23 +120,9 @@ body {
 }
 .morse .input-morse input:focus{
     outline: blue solid 1px ;
-    /* background-color: blue; */
 }
 .input-morse button {
-    position: absolute;
-    right: 0;
-    height: 50px;
-    width: 50px;
-    border: #000 solid 1px;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    margin: auto;
-    bottom: 0;
-    border-radius:0px 9px 9px 0px ;
-    background-color:#87CEFA;
-    color: rgb(255 255 255);
-
+   
 }
 
 .input-morse button:active {
@@ -150,20 +150,141 @@ body {
     align-items: center;
 }
 .lay-out .modal {
-    width: 50%;
+    position: relative;
+    width: 33.333%;
     height: 50%;
     background-color: #fff;
  
 }
+.lay-out .modal .heading-modal {
+    text-align: center;
+    margin-top: 10px;
+}
+.lay-out .modal .modal-content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
 .lay-out .modal input {
-    position: absolute;
-    top: 50%;
-    left: 33.333%;
-    /* right: 50%; */
+    display: block;
+    width: 70%;
+    height: 41px;
+    margin-bottom: 10px;
+    padding: 0 6px;
+}
+.lay-out .modal button {
+    width: 55px;
     height: 30px;
+}    
+/* change morse */
+.MorseText {
+    height: 100vh;
+    /* overflow: hidden; */
+    border-top: 1px solid;
+}
+.content-morse {
+    margin-top: 10%;
+    height: auto;
+}
+.content-morse .tool-change {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.morse-btn-change{
+    position: relative;
+    justify-content: center;
+    margin-top: 12px;
+}
+.content-morse input {
+    height: 50px;
+    font-size: 21px;
+    padding-left: 6px;
+    width: 70%;
+    border: 1px solid;
+    color: navy;
+    border-radius:9px ;
+    margin: 0 8px;
+}
+.tool-change {
 
 }
-
+.tool-change button{
+    margin-right: 15%;
+}
+.result {
+    display: flex;
+    margin-top: 12px;
+    font-size: 30px;
+    margin: 12px 6px 0;
+}
+.result .child-anpha{
+    padding-right: 5px;
+}
+.result .child-anpha:nth-child(odd) {
+    background-color:rgb(60,179,113) ;
+}
+.result .child-anpha:nth-child(even) {
+    background-color:#fff ;
+}
+.result .child-morse {
+    padding-left: 5px;
+}
+.result .child-morse:nth-child(odd) {
+    background-color: #fff;
+}
+.result .child-morse:nth-child(even) {
+    background-color:rgb(60,179,113) ;
+}
+.result .result {
+    display: flex;
+}
+.result #result-anpha {
+    width: 50%;
+    text-align: right;
+}
+.result #result-morse {
+    width: 50%;
+}
+/* có sẵn */
+.permanent {
+    display: flex;
+    margin-top: 12px;
+    font-size: 30px;
+    margin: 12px 6px 0;
+}
+.permanent .permanent-anpha{
+    width: 50%;
+    text-align: right;
+}
+.permanent .permanent-anpha .child-permanentAN{
+    padding-right: 5px;
+}
+.permanent .permanent-morse .child-permanentMO{
+    padding-left: 5px;
+}
+.permanent .permanent-morse{
+    width: 50%;
+}
+.permanent .child-permanentAN:nth-child(odd) {
+    background-color:rgb(60,179,113) ;
+}
+.permanent .child-permanentAN:nth-child(even) {
+    background-color:#fff ;
+}
+.permanent .child-permanentMO:nth-child(odd) {
+    background-color: #fff;
+}
+.permanent .child-permanentMO:nth-child(even) {
+    background-color:rgb(60,179,113) ;
+}
+.empty {
+    width: 100%;
+    height: 50px;
+}
 
 
 
@@ -211,6 +332,21 @@ body {
     }
     .morse-btn button:nth-child(4),button:nth-child(5) {
         width: 100%;
+    }
+    /* morse change */
+    .tool-change input{
+        width: 100%;
+    }
+    .tool-change button{
+        margin: auto;
+    }
+    .tool-change{
+        width: 95%;
+    margin: 12px;
+    margin-left: 9px;
+    }
+    .morse-btn-change button {
+        width: 42%;
     }
     
 }

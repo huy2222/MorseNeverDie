@@ -9,16 +9,16 @@
     <link rel="stylesheet" href="./asset/style.css">
 </head>
 <body>
+<div class="Morsecharacters">        
     <div class="heading">
         <h1>
-            Dịch thuật morse <br> 
-            
+            <!-- Dịch thuật morse <br>          -->
+            morse ⇆ text <br>         
             <h2>
                 -GĐPT Từ Ân-              
                 <!-- <img src="./asset/img/logo_Từ Ân.png" alt="">  -->
             </h2>
         </h1>
-        
     </div>
     <div class="content" id="Id-content">
         <div class="container">       
@@ -26,27 +26,20 @@
                 <div class="input-morse">
                     <label for="">Nhập dữ liệu:</label> 
                     <input type="text" name="" id="nhaplieu" placeholder="Nhập dữ liệu"  autocomplete="off" >
-                    <button type="reset" id="resetmeta">X</button>
+                    <button type="reset" id="resetmeta" class="btn-resetInput" >X</button>
                 </div>
                 <div class="input-morse">
                     <label for="">Nội dung hiển thị:</label>
                     <input type="text" id="hienthi" placeholder="Nội dung hiển thị" autocomplete="off">
-                    <button type="reset" id="resetshow">X</button>
+                    <button type="reset" id="resetshow" class="btn-resetInput">X</button>
                  </div>                
                  <div class="input-morse">
                     <label for="">Nội dung từng kí tự:</label>
                     <input type="text" id="private" placeholder="Nội dung từng kí tự" autocomplete="off">
-                    <button type="reset" id="resetprivate">X</button>
+                    <button type="reset" id="resetprivate" class="btn-resetInput">X</button>
                  </div>                      
             </div>
-            <div class="morse-btn">
-                
-                <!-- <input type="submit" value="." id="dots" > -->
-                <!-- <input type="submit" value="Up" id="send"> -->
-                <!-- <input type="submit" value="-" id="ngang">    -->
-                <!-- <input type="submit" value="X" id="delete">  -->
-                <!-- <input type="reset" name="" id="reset" value="Reset"> -->
-
+            <div class="morse-btn">          
                 <button type="submit" value="." id="dots">●</button>
                 <button type="submit" value="" id="send">Up ↑</button>
                 <button type="submit" value="-" id="ngang">─</button>
@@ -54,18 +47,72 @@
                 <button type="submit" value="" id="reset">Reset</button>                
             </div>
         </div>
-    </div>
+    </div> 
+</div>  
+    <!-- </div>
     <div class="lay-out" id="JS-layout">
         <div class="modal">
-            <input type="password" id="password" value="">
-            <button type="submit" id="submit-password">Logn in</button>
+            <div class="heading-modal">
+                <h2>Nhập mật khẩu để sử dụng</h2>
+            </div>
+            <div class="modal-content">
+                <input type="password" id="password" value="">
+                <button type="submit" id="submit-password">Logn in</button>
+            </div>
+            
         </div>
-    </div>
+    </div> -->
     <!-- <div class="footer">
         <div class="content-footer">
             <img src="./asset/img/background_Từ Ân.jpg" alt=""> 
+        </div> -->
+    
+<div class="MorseText">
+        <div class="heading">
+            <h1>
+                text ⇄ morse<br>         
+                <h2>
+                    -GĐPT Từ Ân-              
+                </h2>
+            </h1>
         </div>
-    </div> -->
+        <div class="content content-morse" id="Id-content">
+            <div class="tool-change">
+                <input type="text" id="metachange" placeholder="Nhập dữ liệu" pattern="[A-Za-z]{1,}" title="vui lòng nhập tiếng việt không dấu">
+                <button type="reset" id="resetmorsechange" class="btn-resetInput">X</button>
+            </div>
+        <div class="morse-btn morse-btn-change">
+            <!-- <button id="btn-change">chuyển đổi</button> -->
+            <button id="btn-change">Change ⇆</button>
+            <button type="submit" value="" id="reset-change">Reset</button>
+        </div>
+        <div class="permanent">
+            <div class="permanent-anpha">
+                <div class="child-permanentAN" id="0">T</div>
+                <div class="child-permanentAN" id="1">U</div>
+                <div class="child-permanentAN" id="3">W</div>
+                <div class="child-permanentAN" id="4">F</div>
+                <div class="child-permanentAN" id="5">A</div>
+                <div class="child-permanentAN" id="6">A</div>
+                <div class="child-permanentAN" id="7">N</div>
+            </div>
+            <div class="permanent-morse">
+                <div class="child-permanentMO" id="8">-</div>
+                <div class="child-permanentMO" id="9">..-</div>
+                <div class="child-permanentMO" id="11">.--</div>
+                <div class="child-permanentMO" id="12">..-.</div>
+                <div class="child-permanentMO" id="13">.-</div>
+                <div class="child-permanentMO" id="14">.-</div>
+                <div class="child-permanentMO" id="15">-.</div>
+            </div>
+        </div>
+        <div class="result" id="result">
+            <div id="result-anpha"></div>
+            <div id="result-morse"></div>
+        </div>
+        <div class="empty"></div>
+    </div>
+</div>
 
     <script src="main.js"></script>
 </body>
