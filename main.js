@@ -185,8 +185,10 @@ var ReseAllChange = document.getElementById('reset-change');
 function ChangeMorse() {
     metachange.value=metachange.value.toUpperCase();
     metachange.value=metachange.value.split(" ").join("");
-    for (var i=0; i<metachange.value.length; i++) {
-        console.log(metachange.value[i]);
+    let pattern=/[a-z]/gi;
+    let resultPattern = metachange.value.match(pattern).join('');
+    if (metachange.value==resultPattern) {
+        for (var i=0; i<metachange.value.length; i++) {
         if (metachange.value[i]=='E') { array.push('.'); } else
         if (metachange.value[i]=='I') { array.push('..'); } else
         if (metachange.value[i]=='S') { array.push('...'); } else
@@ -230,6 +232,9 @@ function ChangeMorse() {
         document.getElementById(k+metachange.value.length).innerHTML=array[k];
     }
     array=[]
+    } else {
+    alert('vui lòng nhập tiếng việt không dấu')
+}
 }
 btnChange.addEventListener('click',ChangeMorse)
 // number: số khối div tạo ra
