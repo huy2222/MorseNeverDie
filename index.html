@@ -24,12 +24,12 @@
         <div class="container">       
             <div class="morse"> 
                 <div class="input-morse">
-                    <label for="">Nhập dữ liệu:</label> 
+                    <label for="">Nhập dữ liệu:<span id="lengthmeta"></span></label> 
                     <input type="text" name="" id="nhaplieu" placeholder="Nhập dữ liệu"  autocomplete="off" >
                     <button type="reset" id="resetmeta" class="btn-resetInput" >X</button>
                 </div>
                 <div class="input-morse">
-                    <label for="">Nội dung hiển thị:</label>
+                    <label for="">Nội dung hiển thị:<span id="lengthShow"></span></label>
                     <input type="text" id="hienthi" placeholder="Nội dung hiển thị" autocomplete="off">
                     <button type="reset" id="resetshow" class="btn-resetInput">X</button>
                  </div>                
@@ -77,10 +77,15 @@
             </h1>
         </div>
         <div class="content content-morse" id="Id-content">
-            <div class="tool-change">
-                <input type="text" id="metachange" placeholder="vd: Từ Ân → TUWFAAN" pattern="[A-Za-z]{1,}" title="vui lòng nhập tiếng việt không dấu">
-                <button type="reset" id="resetmorsechange" class="btn-resetInput">X</button>
+            <div class="chaToolchange">
+                <div class="tool-change">
+                    <!--  &emsp; Độ dài: -->
+                    <label for="">Nhập dữ liệu:<span id="lengthmetachange"></span></label> 
+                    <input type="text" id="metachange" placeholder="vd: Từ Ân → TUWFAAN" pattern="[A-Za-z]{1,}" title="vui lòng nhập tiếng việt không dấu">
+                    <button type="reset" id="resetmorsechange" class="">X</button>
+                </div>
             </div>
+                
         <div class="morse-btn morse-btn-change">
             <!-- <button id="btn-change">chuyển đổi</button> -->
             <button id="btn-change">Change ⇆</button>

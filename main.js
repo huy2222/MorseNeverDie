@@ -15,6 +15,7 @@ var private=document.getElementById('private');
 var array=[];
 var arrayShow=[];
 var number=0;
+
  metachange.value='TUWFAAN';
 
 
@@ -25,6 +26,7 @@ function TichFunction() {
          string=string+array[i];    
      } 
     meta.value=string;  
+    document.getElementById('lengthmeta').innerHTML = meta.value.length;
 }
 tich.addEventListener('click',TichFunction);
 
@@ -35,18 +37,23 @@ function TeFunction() {
          string=string+array[i];    
      } 
     meta.value=string;     
+    document.getElementById('lengthmeta').innerHTML = meta.value.length;
+
 }
 te.addEventListener('click',TeFunction);
 
 function ResetMeta() {
     meta.value='';
     array=[];
+    document.getElementById('lengthmeta').innerHTML = 0;
 }
 resetmeta.addEventListener('click',ResetMeta);
 
 function ResetShow() {
     show.value='';
     arrayShow=[];
+    document.getElementById('lengthShow').innerHTML = 0;
+
 }
 resetshow.addEventListener('click',ResetShow)
 
@@ -54,6 +61,7 @@ function ResetPrivate() {
     private.value='';
 }
 resetprivate.addEventListener('click',ResetPrivate)
+
 function DeleteFunction() {
     var str1='';
     if (meta.value.length>0) {
@@ -63,6 +71,8 @@ function DeleteFunction() {
     meta.value=str1;
     // thay đổi mảng sau khi xóa thành str1 và sau đó nhấn thì add kí tự vào thêm
     array=[str1];
+    document.getElementById('lengthmeta').innerHTML = meta.value.length;
+
 }
 deleteX.addEventListener('click',DeleteFunction)
 
@@ -96,7 +106,18 @@ function ArrayFunction () {
         if (result=='--.-' ) { arrayShow.push('Q')} else 
         if (result=='-.-.' ) { arrayShow.push('C')} else 
         if (result=='.---' ) { arrayShow.push('J')} else 
-        if (result=='--..' ) { arrayShow.push('Z')} else { 
+        if (result=='--..' ) { arrayShow.push('Z')} else
+        if (result=='.----' ) { arrayShow.push('1')} else 		
+        if (result=='..---' ) { arrayShow.push('2')} else 	
+        if (result=='...--' ) { arrayShow.push('3')} else 		
+        if (result=='....-' ) { arrayShow.push('4')} else 		
+        if (result=='.....' ) { arrayShow.push('5')} else 		
+        if (result=='-....' ) { arrayShow.push('6')} else 		
+        if (result=='--...' ) { arrayShow.push('7')} else 		
+        if (result=='---..' ) { arrayShow.push('8')} else 		
+        if (result=='----.' ) { arrayShow.push('9')} else 		
+        if (result=='-----' ) { arrayShow.push('0')} else 	
+        { 
             arrayShow.push('?');
         } 
    var string1='';
@@ -105,10 +126,9 @@ function ArrayFunction () {
    } 
   show.value=string1; 
   array=[];
-//   meta.value='';
+  document.getElementById('lengthShow').innerHTML = arrayShow.length;
 }  
 submit.addEventListener('click',ArrayFunction);
-
 function showFunction() {
      var result = meta.value;    
         if (result=='.' ) { private.value='E'} else 
@@ -137,9 +157,20 @@ function showFunction() {
         if (result=='--.-' ) { private.value='Q'} else 
         if (result=='-.-.' ) { private.value='C'} else 
         if (result=='.---' ) { private.value='J'} else 
-        if (result=='--..' ) { private.value='Z'} else { 
+        if (result=='--..' ) { private.value='Z'} else 
+        if (result=='.----' ) { private.value='1'} else 		
+        if (result=='..---' ) { private.value='2'} else 	
+        if (result=='...--' ) { private.value='3'} else 		
+        if (result=='....-' ) { private.value='4'} else 		
+        if (result=='.....' ) { private.value='5'} else 		
+        if (result=='-....' ) { private.value='6'} else 		
+        if (result=='--...' ) { private.value='7'} else 		
+        if (result=='---..' ) { private.value='8'} else 		
+        if (result=='----.' ) { private.value='9'} else 		
+        if (result=='-----' ) { private.value='0'} else { 
             private.value='??';
         } 
+      
         array=[];
         meta.value='';     
 }
@@ -151,10 +182,14 @@ function ResetFunction() {
     arrayShow=[];
     array=[];
     private.value='';
+    document.getElementById('lengthShow').innerHTML = 0;
+    document.getElementById('lengthmeta').innerHTML = 0;
 }
 reset.addEventListener('click',ResetFunction)
-
-
+var MyTimeour = setTimeout(MyInfor,3000);
+function MyInfor() {  
+    private.value="Nhật Huy đến từ GĐPT Từ ÂN";
+}
 // var ContentMorse = document.getElementById('Id-content');
 // var Password = document.getElementById('password');
 // var btnPassword = document.getElementById('submit-password');
@@ -185,7 +220,7 @@ var ReseAllChange = document.getElementById('reset-change');
 function ChangeMorse() {
     metachange.value=metachange.value.toUpperCase();
     metachange.value=metachange.value.split(" ").join("");
-    let pattern=/[a-z]/gi;
+    let pattern=/[a-z0-9]/gi;
     let resultPattern = metachange.value.match(pattern).join('');
     if (metachange.value==resultPattern) {
         for (var i=0; i<metachange.value.length; i++) {
@@ -215,7 +250,17 @@ function ChangeMorse() {
         if (metachange.value[i]=='Q') { array.push('--.-'); } else
         if (metachange.value[i]=='C') { array.push('-.-.'); } else
         if (metachange.value[i]=='J') { array.push('.---'); } else
-        if (metachange.value[i]=='Z') { array.push('--..'); } else {array.push('????'); }     
+        if (metachange.value[i]=='Z') { array.push('--..'); } else
+        if (metachange.value[i]=='1') { array.push('.----'); } else
+        if (metachange.value[i]=='2') { array.push('..---'); } else
+        if (metachange.value[i]=='3') { array.push('…--'); } else
+        if (metachange.value[i]=='4') { array.push('….-'); } else
+        if (metachange.value[i]=='5') { array.push('…..'); } else
+        if (metachange.value[i]=='6') { array.push('-….'); } else
+        if (metachange.value[i]=='7') { array.push('--…'); } else
+        if (metachange.value[i]=='8') { array.push('---..'); } else
+        if (metachange.value[i]=='9') { array.push('----.'); } else
+        if (metachange.value[i]=='0') { array.push('-----'); } else {array.push('????'); }     
     }
    
     for (var i=0; i<metachange.value.length; i++) {
@@ -239,6 +284,24 @@ function ChangeMorse() {
 btnChange.addEventListener('click',ChangeMorse)
 // number: số khối div tạo ra
 // document.getElementById("btn-change").disabled = true; //khóa nút bấm
+
+function LengthMetaChange() {
+    document.getElementById('lengthmetachange').innerHTML = metachange.value.length;
+}
+metachange.addEventListener('keyup',LengthMetaChange)
+
+function LengthMeta() {
+    // document.getElementById('lengthmeta').innerHTML = meta.value.length;
+    document.getElementById('lengthShow').innerHTML = arrayShow.length;
+}
+meta.addEventListener('keyup',LengthMeta)
+
+function LengthShow() {
+}
+show.addEventListener('change',LengthShow)
+
+
+
 function MetaChange() {
     for (var h=0; h<number; h++) {
         var resultAnpha = document.querySelector('.child-anpha');
@@ -253,6 +316,7 @@ function MetaChange() {
         var PermanentClass = document.querySelector('.permanent');
         PermanentClass.parentNode.removeChild(PermanentClass);
     }
+
     
     // document.getElementById("btn-change").disabled = false; // mở nút bấm
    
@@ -263,9 +327,13 @@ MetaChangeInput.addEventListener('change',MetaChange)
 function ResetChangeInput() {
     metachange.value='';
     array=[];
+    document.getElementById('lengthmetachange').innerHTML = 0;
+
 }
 RestMorseChange.addEventListener('click',ResetChangeInput)
+
 function ReseAllChangeFn() {
+    document.getElementById('lengthmetachange').innerHTML = 0;
     metachange.value='';
     array=[];
     for (var h=0; h<number; h++) {

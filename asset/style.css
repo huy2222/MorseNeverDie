@@ -102,7 +102,7 @@ body {
     margin: 0 8px;
     position: relative;
 }
-.input-morse label {
+ label {
     font-size: 20px;
     margin-bottom: 2px;
     color:#2334ad ;
@@ -189,10 +189,18 @@ body {
     margin-top: 10%;
     height: auto;
 }
+.chaToolchange {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+}
 .content-morse .tool-change {
     display: flex;
     justify-content: center;
     position: relative;
+    flex-direction: column;
+    width: 70%;
 }
 .morse-btn-change{
     position: relative;
@@ -203,17 +211,26 @@ body {
     height: 50px;
     font-size: 21px;
     padding-left: 6px;
-    width: 70%;
+    width: 100%;
     border: 1px solid;
     color: navy;
     border-radius:9px ;
-    margin: 0 8px;
-}
-.tool-change {
-
+    /* margin: 0 8px; */
 }
 .tool-change button{
-    margin-right: 15%;
+    position: absolute;
+    right: 0;
+    height: 50px;
+    width: 50px;
+    border: #000 solid 1px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    bottom: 0;
+    border-radius: 0px 9px 9px 0px;
+    background-color: #87CEFA;
+    color: rgb(255 255 255);
 }
 .result {
     display: flex;
@@ -302,12 +319,6 @@ body {
 
 
 
-
-
-
-
-
-
 /* mobile */
 @media only screen and (max-width:46.1875em){
     .heading{
@@ -334,7 +345,7 @@ body {
         width: 100%;
     }
     /* morse change */
-    .tool-change input{
+    .content-morse .tool-change {
         width: 100%;
     }
     .tool-change button{
