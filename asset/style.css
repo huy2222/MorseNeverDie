@@ -115,10 +115,12 @@ audio {
     justify-content: center;
     align-items: center;
     padding-left: 6px;
-    width: 100%;
+    padding-right: 6px;
+    width: calc(100% - 50px);
     border: 1px solid;
     color: navy;
-    border-radius:9px ;
+    border-radius:  9px 0 0 9px;
+    
 }
 .morse .input-morse input:focus{
     outline: blue solid 1px ;
@@ -213,10 +215,11 @@ audio {
     height: 50px;
     font-size: 21px;
     padding-left: 6px;
-    width: 100%;
+    padding-right: 6px;
+    width: calc(100% - 50px);
     border: 1px solid;
     color: navy;
-    border-radius:9px ;
+    border-radius: 9px 0 0 9px;
     /* margin: 0 8px; */
 }
 .tool-change button{

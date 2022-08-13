@@ -30,7 +30,7 @@ function TichFunction() {
      } 
     meta.value=string;  
     document.getElementById('lengthmeta').innerHTML = meta.value.length;
-    SoundTe.pause()
+    // SoundTe.pause() dừng âm thanh
     SoundTich.play()
 }
 tich.addEventListener('click',TichFunction);
