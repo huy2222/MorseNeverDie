@@ -16,7 +16,10 @@ var array=[];
 var arrayShow=[];
 var number=0;
 
- metachange.value='TUWFAAN';
+var SoundTich = document.getElementById('soundTich');
+var SoundTe = document.getElementById('soundTe');
+
+metachange.value='TUWFAAN';
 
 
 function TichFunction() {
@@ -27,6 +30,8 @@ function TichFunction() {
      } 
     meta.value=string;  
     document.getElementById('lengthmeta').innerHTML = meta.value.length;
+    SoundTe.pause()
+    SoundTich.play()
 }
 tich.addEventListener('click',TichFunction);
 
@@ -38,6 +43,7 @@ function TeFunction() {
      } 
     meta.value=string;     
     document.getElementById('lengthmeta').innerHTML = meta.value.length;
+    SoundTe.play()
 
 }
 te.addEventListener('click',TeFunction);
